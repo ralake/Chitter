@@ -1,3 +1,9 @@
-<form action="/registration" method="get">
-  <input type="submit" value="Sign up">
-</form>
+<% if current_user %>
+  <span>
+    Welcome to Chitter <%= current_user.name %>!
+  </span>
+<% else %>
+  <form action="/users/new" method="get">
+    <input type="submit" value="Sign up">
+  </form>
+<% end %>
