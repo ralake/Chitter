@@ -6,3 +6,8 @@ Feature: Visiting the Chitter homepage
 Scenario: Visit the homepage
   Given I visit the homepage
   Then I should see "Chitter" 
+
+Scenario: Registering for Chitter
+  Given I visit the homepage
+  And I click "Sign up"
+  Then I should see "Chitter Registration"
