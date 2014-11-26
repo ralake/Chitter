@@ -9,7 +9,9 @@
     </header>
     <section>
       <% if flash[:notice] %>
-        <div id="notice"><%= flash[:notice] %></div>
+        <div id="notice">
+          <%= flash[:notice] %>
+        </div>
       <% end %>
       <%= yield %>
     </section>

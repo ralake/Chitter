@@ -14,4 +14,5 @@ end
 
 Then(/^I should see a welcome message$/) do
   expect(page).to have_content("Welcome to Chitter Rich!")
+  expect(page).not_to have_button("Sign up")
 end

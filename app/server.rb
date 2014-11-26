@@ -14,6 +14,7 @@ class Chitter < Sinatra::Base
   set :public_folder, Proc.new { File.join(root, "..", "public/css") }
   enable :sessions
   use Rack::Flash
+  use Rack::MethodOverride
 
   get '/' do
     erb :homepage
@@ -25,12 +26,35 @@ class Chitter < Sinatra::Base
 
   post '/' do
     user = User.create(:name => params[:name],
-                        :username => params[:username],
-                        :email => params[:email],
-                        :password => params[:password])
+                       :username => params[:username],
+                       :email => params[:email],
+                       :password => params[:password])
     user.save
     session[:user_id] = user.id
-    erb :homepage
+    redirect to('/')
+  end
+
+  get '/sessions/new' do
+    erb :"sessions/new"
+  end
+
+  post '/sessions' do
+    username, password = params[:username], params[:password]
+    user = User.authenticate(username, password)
+    p user
+    if user
+      session[:user_id] = user.id
+      redirect to('/')
+    else
+      flash[:notice] = ["The username or password is incorrect"]
+      erb :"sessions/new"
+    end
+  end
+
+  delete '/sessions' do
+    session[:user_id] = nil
+    flash[:notice] = "See you soon!"
+    redirect to('/')
   end
 
   def current_user
