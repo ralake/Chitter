@@ -41,12 +41,11 @@ class Chitter < Sinatra::Base
   post '/sessions' do
     username, password = params[:username], params[:password]
     user = User.authenticate(username, password)
-    p user
     if user
       session[:user_id] = user.id
       redirect to('/')
     else
-      flash[:notice] = ["The username or password is incorrect"]
+      flash[:notice] = "The username or password is incorrect. Please try again."
       erb :"sessions/new"
     end
   end

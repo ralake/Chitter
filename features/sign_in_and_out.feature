@@ -1,8 +1,19 @@
-Feature: Signing in to Chitter
+Feature: Signing in to and out of Chitter
   In order to use Chitter
   As a person who has registered
-  I want to sign in
+  I want to be able to sign in and sign out
+
+Background: Registering for Chitter
+  Given I visit the homepage
+  And I sign up
+  Then I should see a welcome message
 
 Scenario: Signing in to Chitter
-  Given I sign in
-  Then I should be able to sign out
+  Given I sign out
+  Then I should be able to sign in
+
+Scenario: Attempting to sign in with incorrect details
+  Given I have registered
+  And I am signed out
+  When I try to sign in with an incorrect email or username
+  Then I should have to re-enter my details
