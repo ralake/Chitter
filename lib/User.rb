@@ -6,9 +6,11 @@ class User
 
   property :id,              Serial
   property :name,            String
-  property :username,        String
-  property :email,           String
+  property :username,        String, :unique => true, :message => "This username is already taken. Try another."
+  property :email,           String, :unique => true, :message => "An account already exists for this email address."
   property :password_digest, Text
+
+  validates_uniqueness_of :email, :username
 
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)

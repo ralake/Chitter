@@ -15,5 +15,5 @@ Scenario: Signing in to Chitter
 Scenario: Attempting to sign in with incorrect details
   Given I have registered
   And I am signed out
-  When I try to sign in with an incorrect email or username
+  When I try to sign in with an incorrect username
   Then I should have to re-enter my details

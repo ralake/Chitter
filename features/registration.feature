@@ -5,5 +5,15 @@ Feature: Registering for Chitter
 
 Scenario: Registering for Chitter
   Given I visit the homepage
-  And I sign up
+  When I sign up
   Then I should see a welcome message
+
+Scenario: Attempting to sign up with a username that already exists
+  Given I visit the homepage
+  When I try to sign up with an existing username
+  Then I should be asked to try another username
+
+Scenario: Attempting to sign up with an email that is already associated with a Chitter account
+  Given I visit the homepage
+  When I try to sign up with an email that is already associated with an account
+  Then I should be warned and asked to provide a different email address

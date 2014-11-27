@@ -20,10 +20,10 @@ Given(/^I am signed out$/) do
   click_button("Sign out")
 end
 
-When(/^I try to sign in with an incorrect email or username$/) do
+When(/^I try to sign in with an incorrect username$/) do
   click_button("Sign in")
   fill_in "username", with: "richmaker"
-  fill_in "password", with: "password2015"
+  fill_in "password", with: "password2014"
   click_button("Go!")
 end
 
