@@ -18,11 +18,20 @@ Then(/^I should see a welcome message$/) do
 end
 
 When(/^I try to sign up with an existing username$/) do
-  pending # express the regexp above with the code you wish you had
+  User.create(:name => "Rich",
+              :username => "rich_maker",
+              :email => "rich@lake.com",
+              :password => "test")
+  click_button("Sign up")
+  fill_in "name", with: "Rich"
+  fill_in "username", with: "rich_maker"
+  fill_in "email", with: "rich@lake.com"
+  fill_in "password", with: "password2014"
+  click_button("Register")
 end
 
 Then(/^I should be asked to try another username$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content("Username is already taken")
 end
 
 When(/^I try to sign up with an email that is already associated with an account$/) do

@@ -6,8 +6,8 @@ class User
 
   property :id,              Serial
   property :name,            String
-  property :username,        String, :unique => true, :message => "This username is already taken. Try another."
-  property :email,           String, :unique => true, :message => "An account already exists for this email address."
+  property :username,        String, :unique => true
+  property :email,           String, :unique => true
   property :password_digest, Text
 
   validates_uniqueness_of :email, :username
