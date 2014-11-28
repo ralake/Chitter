@@ -1,3 +1,9 @@
+<ul>
+  <% @peeps.each do |peep| %>
+    <li><%= peep.message %></li>
+  <% end %>
+</ul>
+
 <% if current_user %>
 
   <span>

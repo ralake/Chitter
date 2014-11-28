@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'data_mapper'
 require './lib/user'
+require './lib/peep'
 require 'rack-flash'
 
 env = ENV["RACK_ENV"] || "development"
@@ -17,6 +18,7 @@ class Chitter < Sinatra::Base
   use Rack::MethodOverride
 
   get '/' do
+    @peeps = Peep.all
     erb :homepage
   end
 
@@ -64,10 +66,11 @@ class Chitter < Sinatra::Base
     erb :peeps
   end
 
-  post '/peeps' do
-    peep = Peep.create(:peep => params[:peep],
-                       :author => @current.user.name,
-                       :username => @current_user.username)
+  post '/homepage' do
+    peep = Peep.create(:message => params[:message],
+                       :author => current_user.name,
+                       :username => current_user.username)
+    peep.save
     redirect to('/')
   end
 
