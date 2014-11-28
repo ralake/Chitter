@@ -17,8 +17,8 @@ Then(/^I should see a welcome message$/) do
   expect(page).not_to have_button("Sign up")
 end
 
-When(/^I try to sign up with an existing username$/) do
-  User.create(:name => "Rich",
+When(/^I try to sign up with an existing username and email$/) do
+   User.create(:name => "Rich",
               :username => "rich_maker",
               :email => "rich@lake.com",
               :password => "test")
@@ -30,14 +30,7 @@ When(/^I try to sign up with an existing username$/) do
   click_button("Register")
 end
 
-Then(/^I should be asked to try another username$/) do
+Then(/^I should be warned that they are already in use$/) do
+  expect(page).to have_content("Email is already taken")
   expect(page).to have_content("Username is already taken")
-end
-
-When(/^I try to sign up with an email that is already associated with an account$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should be warned and asked to provide a different email address$/) do
-  pending # express the regexp above with the code you wish you had
 end

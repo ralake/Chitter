@@ -8,12 +8,7 @@ Scenario: Registering for Chitter
   When I sign up
   Then I should see a welcome message
 
-Scenario: Attempting to sign up with a username that already exists
+Scenario: Attempting to sign up with a username or email that already exists
   Given I visit the homepage
-  When I try to sign up with an existing username
-  Then I should be asked to try another username
-
-Scenario: Attempting to sign up with an email that is already associated with a Chitter account
-  Given I visit the homepage
-  When I try to sign up with an email that is already associated with an account
-  Then I should be warned and asked to provide a different email address
+  When I try to sign up with an existing username and email
+  Then I should be warned that they are already in use
