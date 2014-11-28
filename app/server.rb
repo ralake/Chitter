@@ -8,7 +8,7 @@ env = ENV["RACK_ENV"] || "development"
 
 DataMapper.setup(:default, "postgres://localhost/Chitter_#{env}")
 DataMapper.finalize
-DataMapper.auto_upgrade!
+DataMapper.auto_migrate!
 
 class Chitter < Sinatra::Base
 
@@ -69,7 +69,9 @@ class Chitter < Sinatra::Base
   post '/homepage' do
     peep = Peep.create(:message => params[:message],
                        :author => current_user.name,
-                       :username => current_user.username)
+                       :username => current_user.username,
+                       :created => "#{(Time.now).strftime('%d.%m.%Y - %H:%M')}",
+                       :user_id => current_user.id)
     peep.save
     redirect to('/')
   end

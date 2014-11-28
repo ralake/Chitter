@@ -10,6 +10,8 @@ class User
   property :email,           String, :unique => true
   property :password_digest, Text
 
+  has n, :peeps
+
   validates_uniqueness_of :email, :username
 
   def password=(password)
@@ -24,5 +26,5 @@ class User
       nil
     end
   end
-  
+
 end
