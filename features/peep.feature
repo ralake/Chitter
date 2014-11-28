@@ -11,3 +11,7 @@ Background: Registering and signing in to Chitter
 Scenario: Writing a peep
   Given I write a peep
   Then I should see the peep displayed on the homepage
+
+Scenario: Viewing all posted peeps
+  Given I have written a few peeps
+  Then I should see the peeps displayed in chronological order
