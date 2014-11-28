@@ -4,10 +4,10 @@
     Welcome to Chitter <%= @current_user.name %>!
   </span>
 
-  <form action="/peeps" method="get">
-    <input type="submit" value="Compose a peep">
-  </form>
-
+ <form action='/homepage' method="post">
+  <input type="text" name="message">
+  <input type="submit" value="Post my peep">
+</form>
   <form method="post" action="/sessions">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Sign out">
