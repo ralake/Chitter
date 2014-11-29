@@ -4,8 +4,8 @@
     <span>
       Welcome to Chitter <%= @current_user.name %>!
     </span>
-    <form action='/homepage' method="post">
-      <input type="text" name="message" maxlength="114">
+    <form action='/homepage' autocomplete="off" method="post">
+      <input type="text" name="message" placeholder="peep here..." maxlength="114">
       <input type="submit" class="post_peep" value="Post my peep">
     </form>
     <form method="post" action="/sessions">

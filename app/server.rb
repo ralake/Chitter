@@ -6,7 +6,7 @@ require 'rack-flash'
 
 env = ENV["RACK_ENV"] || "development"
 
-DataMapper.setup(:default, "postgres://localhost/Chitter_#{env}")
+DataMapper.setup(:default, ENV['CHITTER_DB_URL'] || "postgres://localhost/Chitter_#{env}")
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
