@@ -1,0 +1,78 @@
+body {
+      font-family: 'chitter2';
+}
+
+@font-face {
+  font-family: 'chitter';
+  src: url('../fonts/Neou-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'chitter2';
+  src: url('../fonts/LANENAR_.ttf');
+}
+
+h1 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 80pt;
+}
+
+li {
+    list-style-type: none;
+}
+
+#homepage_buttons {
+                   width: 185px;
+                   font-family: 'chitter2';
+                   font-size: 20px;
+                   color: black;
+}
+
+#sign_up_button {
+                 float: left;
+                 border-radius: 4px;
+                 text-decoration: none;
+                 border: 2px solid black;
+                 height: 35px;
+                 width: 80px;
+                 padding-top: 12px;
+}
+
+#sign_up_button:hover {
+                       background-color: #DFDDE0;
+}
+
+#sign_up_button:visited {
+                      color: black;
+}
+
+#sign_up_button:active {
+                        background-color: #C5C4C7;
+}
+
+#sign_in_button {
+                 float: right;
+                 border-radius: 4px;
+                 text-decoration: none;
+                 border: 2px solid black;
+                 height: 35px;
+                 width: 80px;
+                 padding-top: 12px;
+}
+
+#sign_in_button:hover {
+                       background-color: #DFDDE0;
+}
+
+#sign_in_button:visited {
+                         color: black;
+}
+
+#sign_in_button:active {
+                        background-color: #C5C4C7;
+}
+
+#peep_display {
+                margin-top: 10px;
+}

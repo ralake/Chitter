@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Chitter</title>
-  </head>
-  <body>
-    <header>
-      <h1>Chitter</h1>
-    </header>
-    <section>
-      <% if flash[:notice] %>
-        <div id="notice">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
-      <% if flash[:errors] && !flash[:errors].empty? %>
-        There are some issues...
-        <ul id="errors">
-          <% flash[:errors].each do |error| %>
-            <li><%= error %></li>
-          <% end %>
-        </ul>
-      <% end %>
-      <%= yield %>
-    </section>
-  </body>
+  <center>
+    <head>
+      <title>Chitter</title>
+      <link rel="stylesheet" type="text/css" href="reset.css"/>
+      <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+    </head>
+    <body>
+      <header>
+        <h1>Chitter</h1>
+      </header>
+        <% if flash[:notice] %>
+          <div id="notice">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+        <% if flash[:errors] && !flash[:errors].empty? %>
+          There are some issues...
+          <ul id="errors">
+            <% flash[:errors].each do |error| %>
+              <li><%= error %></li>
+            <% end %>
+          </ul>
+        <% end %>
+        <%= yield %>
+    </body>
+  </center>
 </html>

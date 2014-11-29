@@ -4,10 +4,10 @@
     Welcome to Chitter <%= @current_user.name %>!
   </span>
 
- <form action='/homepage' method="post">
-  <input type="text" name="message">
-  <input type="submit" value="Post my peep">
-</form>
+  <form action='/homepage' method="post">
+    <input type="text" name="message">
+    <input type="submit" value="Post my peep">
+  </form>
   <form method="post" action="/sessions">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Sign out">
@@ -15,20 +15,19 @@
 
 <% else %>
 
-
-  <form action="/sessions/new" method="get">
-    <input type="submit" value="Sign in">
-  </form>
-
-  <form action="/users/new" method="get">
-    <input type="submit" value="Sign up">
-  </form>
+<div id="homepage_buttons">
+  <a href='/sessions/new' id="sign_in_button" class='button'>Sign in</a>
+  <a href='/users/new' id="sign_up_button" class='button'>Sign up</a>
+</div>
   
 <% end %>
 
 <ul>
   <% @peeps.reverse.each do |peep| %>
-    <li><%= peep.message %> | <%= peep.author %> | <%= peep.username %> | <%= peep.created %></li>
+    <div id="peep_display">
+      <li id="peep_text"><%= peep.message %></li>
+      <li id="peep_info"><%= peep.author %> | <%= peep.username %> | <%= peep.created %></li>
+    </div>
   <% end %>
 
 </ul>
