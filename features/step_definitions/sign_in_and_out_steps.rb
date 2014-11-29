@@ -6,7 +6,7 @@ end
 
 Then(/^I should be able to sign in$/) do
   visit '/'
-  click_button("Sign in")
+  click_link("Sign in")
   fill_in "username", with: "rich_maker"
   fill_in "password", with: "password2014"
   click_button("Go!")
@@ -21,7 +21,7 @@ Given(/^I am signed out$/) do
 end
 
 When(/^I try to sign in with an incorrect username$/) do
-  click_button("Sign in")
+  click_link("Sign in")
   fill_in "username", with: "richmaker"
   fill_in "password", with: "password2014"
   click_button("Go!")

@@ -4,7 +4,7 @@ Given(/^I visit the homepage$/) do
 end
 
 When(/^I sign up$/) do
-  click_button("Sign up")
+  click_link("Sign up")
   fill_in "name", with: "Rich"
   fill_in "username", with: "rich_maker"
   fill_in "email", with: "rich@lake.com"
@@ -22,7 +22,7 @@ When(/^I try to sign up with an existing username and email$/) do
               :username => "rich_maker",
               :email => "rich@lake.com",
               :password => "test")
-  click_button("Sign up")
+  click_link("Sign up")
   fill_in "name", with: "Rich"
   fill_in "username", with: "rich_maker"
   fill_in "email", with: "rich@lake.com"

@@ -1,14 +1,9 @@
 body {
-      font-family: 'chitter2';
+      font-family: 'LANENAR';
 }
 
 @font-face {
-  font-family: 'chitter';
-  src: url('../fonts/Neou-Thin.ttf');
-}
-
-@font-face {
-  font-family: 'chitter2';
+  font-family: 'LANENAR';
   src: url('../fonts/LANENAR_.ttf');
 }
 
@@ -22,21 +17,15 @@ li {
     list-style-type: none;
 }
 
-#homepage_buttons {
-                   width: 185px;
-                   font-family: 'chitter2';
-                   font-size: 20px;
-                   color: black;
-}
-
 #sign_up_button {
-                 float: left;
+                 float: right;
                  border-radius: 4px;
                  text-decoration: none;
                  border: 2px solid black;
                  height: 35px;
                  width: 80px;
                  padding-top: 12px;
+                 font-size: 20px;
 }
 
 #sign_up_button:hover {
@@ -52,6 +41,8 @@ li {
 }
 
 #sign_in_button {
+                 margin-right: 15px;
+                 margin-left: 10px;
                  float: right;
                  border-radius: 4px;
                  text-decoration: none;
@@ -59,6 +50,8 @@ li {
                  height: 35px;
                  width: 80px;
                  padding-top: 12px;
+                 top: -10px;
+                 font-size: 20px;
 }
 
 #sign_in_button:hover {
@@ -74,5 +67,26 @@ li {
 }
 
 #peep_display {
-                margin-top: 10px;
+               margin-top: 10px;
+               border-radius: 4px;
+               text-decoration: none;
+               border: 2px solid black;
+               width: 600px;
+               font-size: 17px;
+}
+
+#peep_text {
+            background-color: #FFAC3B;
+            margin: 4px;
+            border-radius: 4px;
+            font-size: 25px;
+            padding: 3px;
+            font-weight: bold;
+}
+
+#peep_info {
+            padding: 3px;
+            background-color: #E4E2E5;
+            margin: 4px;
+            border-radius: 4px;
 }

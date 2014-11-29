@@ -1,32 +1,27 @@
-<% if current_user %>
-
-  <span>
-    Welcome to Chitter <%= @current_user.name %>!
-  </span>
-
-  <form action='/homepage' method="post">
-    <input type="text" name="message">
-    <input type="submit" value="Post my peep">
-  </form>
-  <form method="post" action="/sessions">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Sign out">
-  </form>
-
-<% else %>
-
-<div id="homepage_buttons">
-  <a href='/sessions/new' id="sign_in_button" class='button'>Sign in</a>
-  <a href='/users/new' id="sign_up_button" class='button'>Sign up</a>
-</div>
-  
-<% end %>
-
+<header>
+  <h1>Chitter</h1>
+  <% if current_user %>
+    <span>
+      Welcome to Chitter <%= @current_user.name %>!
+    </span>
+    <form action='/homepage' method="post">
+      <input type="text" name="message" maxlength="114">
+      <input type="submit" class="post_peep" value="Post my peep">
+    </form>
+    <form method="post" action="/sessions">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Sign out">
+    </form>
+  <% else %>
+    <a href='/sessions/new' id="sign_in_button" class='button'>Sign in</a>
+    <a href='/users/new' id="sign_up_button" class='button'>Sign up</a>
+  <% end %>
+</header>
 <ul>
   <% @peeps.reverse.each do |peep| %>
     <div id="peep_display">
       <li id="peep_text"><%= peep.message %></li>
-      <li id="peep_info"><%= peep.author %> | <%= peep.username %> | <%= peep.created %></li>
+      <li id="peep_info"><%= peep.author %> (<%= peep.username %>) | <%= peep.created %></li>
     </div>
   <% end %>
 
