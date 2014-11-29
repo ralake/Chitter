@@ -1,3 +1,19 @@
+<h1>Chitter</h1>
+
+<% if flash[:notice] %>
+  <div id="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:errors] && !flash[:errors].empty? %>
+  There are some issues...
+  <ul id="errors">
+    <% flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <form action="/sessions" autocomplete="off" method="post">
   Username: <input type="text" name="username">
   Password: <input type="password" name="password">

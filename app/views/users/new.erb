@@ -1,4 +1,18 @@
-<h2>Chitter Registration</h2>
+<h1>Chitter Registration</h1>
+
+<% if flash[:notice] %>
+  <div id="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:errors] && !flash[:errors].empty? %>
+  There are some issues...
+  <ul id="errors">
+    <% flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <form action='/' autocomplete="off" method="post">
   <input type="text" placeholder="Name" name="name">

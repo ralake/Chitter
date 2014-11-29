@@ -10,5 +10,5 @@ end
 
 def post_peep(peep)
   fill_in "message", with: peep
-  click_button("Post my peep")
+  click_button("Peep")
 end

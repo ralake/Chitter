@@ -12,7 +12,7 @@ DataMapper.auto_upgrade!
 
 class Chitter < Sinatra::Base
 
-  set :public_folder, Proc.new { File.join(root, "..", "public/css") }
+  set :public_folder, Proc.new { File.join(root, "..", "public") }
   enable :sessions
   use Rack::Flash
   use Rack::MethodOverride
@@ -70,7 +70,7 @@ class Chitter < Sinatra::Base
     peep = Peep.create(:message => params[:message],
                        :author => current_user.name,
                        :username => current_user.username,
-                       :created => "#{(Time.now).strftime('%d.%m.%Y - %H:%M')}",
+                       :created => "#{(Time.now).strftime('%H:%M / %d.%m.%Y')}",
                        :user_id => current_user.id)
     peep.save
     redirect to('/')

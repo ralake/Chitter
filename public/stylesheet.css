@@ -1,0 +1,169 @@
+body {
+      font-family: 'LANENAR';
+}
+
+@font-face {
+  font-family: 'LANENAR';
+  src: url('./LANENAR_.ttf');
+}
+
+h1 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 80pt;
+}
+
+li {
+    list-style-type: none;
+}
+
+#sign_up_button {
+                 float: right;
+                 border-radius: 4px;
+                 text-decoration: none;
+                 border: 2px solid black;
+                 height: 35px;
+                 width: 80px;
+                 padding-top: 12px;
+                 font-size: 20px;
+}
+
+#sign_up_button:hover {
+                       background-color: #E4E2E5;
+}
+
+#sign_up_button:visited {
+                      color: black;
+}
+
+#sign_up_button:active {
+                        background-color: #C5C4C7;
+}
+
+#sign_in_button {
+                 margin-right: 15px;
+                 margin-left: 10px;
+                 float: right;
+                 border-radius: 4px;
+                 text-decoration: none;
+                 border: 2px solid black;
+                 height: 35px;
+                 width: 80px;
+                 padding-top: 12px;
+                 top: -10px;
+                 font-size: 20px;
+}
+
+#sign_in_button:hover {
+                       background-color: #E4E2E5;
+}
+
+#sign_in_button:visited {
+                         color: black;
+}
+
+#sign_in_button:active {
+                        background-color: #C5C4C7;
+}
+
+#sign_out_button {
+                 margin-right: 15px;
+                 margin-left: 10px;
+                 float: right;
+                 border-radius: 4px;
+                 text-decoration: none;
+                 border: 2px solid black;
+                 height: 53px;
+                 width: 90px;
+                 top: -10px;
+                 font-size: 20px;
+                 background-color: white;
+}
+
+#sign_out_button:focus {
+                        outline: 0;
+}
+
+#sign_out_button:visited {
+                         color: black;
+}
+
+#sign_out_button:hover {
+                        background-color: #E4E2E5;
+}
+
+#sign_out_button:active {
+                         background-color: #C5C4C7;
+}
+
+#post_peep_button {
+                   vertical-align: bottom;
+                   margin-top: 20px;
+                   margin-bottom: 15px;
+                   border-radius: 4px;
+                   text-decoration: none;
+                   border: 2px solid black;
+                   height: 68px;
+                   width: 85px;
+                   top: -10px;
+                   font-size: 20px;
+                   background-color: white;
+}
+
+#post_peep_button:focus {
+                        outline: 0;
+}
+
+#post_peep_button:visited {
+                         color: black;
+}
+
+#post_peep_button:hover {
+                        background-color: #E4E2E5;
+}
+
+#post_peep_button:active {
+                         background-color: #C5C4C7;
+}
+
+#peep_box {
+          vertical-align: bottom;
+          width: 507px;
+          height: 60px;
+          font-family: 'LANENAR';
+          font-size: 17px;
+          border: 2px solid black;
+          border-radius: 4px;
+          margin-bottom: 15px;
+
+}
+
+#peep_box:focus {
+                        outline: 0;
+}
+
+#peep_display {
+               margin-top: 10px;
+               border-radius: 4px;
+               text-decoration: none;
+               border: 2px solid black;
+               width: 600px;
+               font-size: 17px;
+               text-align: top;
+}
+
+#peep_text {
+            background-color: #FFAC3B;
+            margin: 4px;
+            border-radius: 4px;
+            font-size: 25px;
+            padding: 3px;
+            font-weight: bold;
+}
+
+#peep_info {
+            padding: 3px;
+            background-color: #E4E2E5;
+            margin: 4px;
+            border-radius: 4px;
+}

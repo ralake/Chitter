@@ -1,16 +1,29 @@
 <header>
   <h1>Chitter</h1>
+  <% if flash[:notice] %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if flash[:errors] && !flash[:errors].empty? %>
+    There are some issues...
+    <ul id="errors">
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <% if current_user %>
     <span>
-      Welcome to Chitter <%= @current_user.name %>!
+      Welcome to Chitter <%= @current_user.name %>! Peep here...
     </span>
     <form action='/homepage' autocomplete="off" method="post">
-      <input type="text" name="message" placeholder="peep here..." maxlength="114">
-      <input type="submit" class="post_peep" value="Post my peep">
+      <textarea type="text" id="peep_box" name="message" placeholder="peep here..." maxlength="114"></textarea>
+      <input type="submit" id="post_peep_button" value="Peep">
     </form>
     <form method="post" action="/sessions">
       <input type="hidden" name="_method" value="delete">
-      <input type="submit" value="Sign out">
+      <input type="submit" id="sign_out_button" value="Sign out">
     </form>
   <% else %>
     <a href='/sessions/new' id="sign_in_button" class='button'>Sign in</a>
