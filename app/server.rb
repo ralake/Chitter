@@ -1,8 +1,8 @@
 require 'sinatra/base'
 require 'data_mapper'
-require 'lib/user'
-require 'lib/peep'
 require 'rack-flash'
+require_relative '../lib/user'
+require_relative '../lib/peep'
 
 env = ENV["RACK_ENV"] || "development"
 
