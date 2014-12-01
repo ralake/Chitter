@@ -14,7 +14,7 @@
     </ul>
   <% end %>
   <% if current_user %>
-    <span>
+    <span id="welcome">
       Welcome to Chitter <%= @current_user.name %>! Peep here...
     </span>
     <form action='/homepage' autocomplete="off" method="post">
