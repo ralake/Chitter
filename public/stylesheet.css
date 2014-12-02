@@ -179,3 +179,62 @@ li {
             margin: 4px;
             border-radius: 4px;
 }
+
+.reg_box {
+          font-size: 30px;
+/*          vertical-align: bottom;
+*/        width: 200px;
+          height: 32px;
+          font-family: 'LANENAR';
+          font-size: 17px;
+          border: 1.5px solid black;
+          border-radius: 4px;
+          margin-bottom: 15px;
+          margin-right: 10px;
+}
+
+#reg_button {
+             vertical-align: bottom;
+             margin-top: 20px;
+             margin-bottom: 15px;
+             border-radius: 4px;
+             text-decoration: none;
+             border: 2px solid black;
+             height: 37px;
+             width: 100px;
+             top: -10px;
+             font-size: 20px;
+             background-color: white;
+}
+
+#reg_button:focus {
+                        outline: 0;
+}
+
+#reg_button:visited {
+                         color: black;
+}
+
+#reg_button:hover {
+                        background-color: #E4E2E5;
+}
+
+#reg_button:active {
+                         background-color: #C5C4C7;
+}
+
+#sign_in_form {
+               margin-top: 15px;
+}
+
+#notice {
+         margin-top: 8px;
+         font-size: 18px;
+         color: #FFAC3B;
+}
+
+#errors {
+         margin-top: 8px;
+         font-size: 18px;
+         color: #FFAC3B;
+}

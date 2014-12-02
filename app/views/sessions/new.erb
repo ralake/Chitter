@@ -6,7 +6,6 @@
   </div>
 <% end %>
 <% if flash[:errors] && !flash[:errors].empty? %>
-  There are some issues...
   <ul id="errors">
     <% flash[:errors].each do |error| %>
       <li><%= error %></li>
@@ -14,8 +13,8 @@
   </ul>
 <% end %>
 
-<form action="/sessions" autocomplete="off" method="post">
-  Username: <input type="text" name="username">
-  Password: <input type="password" name="password">
+<form action="/sessions" id="sign_in_form" autocomplete="off" method="post">
+  Username: <input class="reg_box" type="text" name="username">
+  Password: <input class="reg_box" type="password" name="password">
   <input type="submit" value="Go!">
 </form>
