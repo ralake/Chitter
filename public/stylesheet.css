@@ -238,3 +238,33 @@ li {
          font-size: 18px;
          color: #FFAC3B;
 }
+
+#go_button {
+             vertical-align: bottom;
+             margin-top: 20px;
+             margin-bottom: 15px;
+             border-radius: 4px;
+             text-decoration: none;
+             border: 2px solid black;
+             height: 37px;
+             width: 100px;
+             top: -10px;
+             font-size: 20px;
+             background-color: white;
+}
+
+#go_button:focus {
+                        outline: 0;
+}
+
+#go_button:visited {
+                         color: black;
+}
+
+#go_button:hover {
+                        background-color: #E4E2E5;
+}
+
+#go_button:active {
+                         background-color: #C5C4C7;
+}
