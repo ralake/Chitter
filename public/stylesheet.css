@@ -182,8 +182,7 @@ li {
 
 .reg_box {
           font-size: 30px;
-/*          vertical-align: bottom;
-*/        width: 200px;
+          width: 200px;
           height: 32px;
           font-family: 'LANENAR';
           font-size: 17px;
