@@ -24,16 +24,6 @@ li {
   list-style-type: none;
 }
 
-footer {
-  font-size: 10pt;
-  position: absolute;
-  height: 18px;
-  width: 100%;
-  font-weight: bold;
-  background-color: #F2F1EE;
-  padding-top: 7px;
-}
-
 #welcome {
   font-size: 20px;
 }
