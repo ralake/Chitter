@@ -9,6 +9,8 @@ class Chitter < Sinatra::Base
 
   set :public_folder, Proc.new { File.join(root, "..", "public") }
   enable :sessions
+  enable :partial_underscores
+  set :partial_template_engine, :erb
   use Rack::Flash
   use Rack::MethodOverride
 

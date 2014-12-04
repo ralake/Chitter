@@ -1,5 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-      font-family: 'LANENAR';
+  font-family: 'LANENAR';
+  height: 100%;
+  margin-bottom: 18px;
 }
 
 @font-face {
@@ -8,33 +15,43 @@ body {
 }
 
 h1 {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    font-size: 80pt;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 80pt;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
+}
+
+footer {
+  font-size: 10pt;
+  position: absolute;
+  height: 18px;
+  width: 100%;
+  font-weight: bold;
+  background-color: #F2F1EE;
+  padding-top: 7px;
 }
 
 #welcome {
-          font-size: 20px;
+  font-size: 20px;
 }
 
 #sign_up_button {
-                 top: 20px;
-                 position: absolute;
-                 margin-right: 10px;
-                 right: 110px;
-                 border-radius: 4px;
-                 text-decoration: none;
-                 color: black;
-                 border: 2px solid black;
-                 height: 35px;
-                 width: 80px;
-                 padding-top: 12px;
-                 font-size: 20px;
-                 font-weight: bolder;
+   top: 20px;
+   position: absolute;
+   margin-right: 10px;
+   right: 110px;
+   border-radius: 4px;
+   text-decoration: none;
+   color: black;
+   border: 2px solid black;
+   height: 35px;
+   width: 80px;
+   padding-top: 12px;
+   font-size: 20px;
+   font-weight: bolder;
 }
 
 #sign_up_button:hover {
@@ -154,7 +171,8 @@ li {
 }
 
 #peep_display {
-               margin-top: 15px;
+               margin-top: 10px;
+               margin-bottom: 10px;
                border-radius: 4px;
                text-decoration: none;
                border: 2px solid black;

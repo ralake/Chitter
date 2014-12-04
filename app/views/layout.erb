@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Chitter</title>
+    <link rel="stylesheet" type="text/css" href="/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
+  </head>
   <center>
-    <head>
-      <title>Chitter</title>
-      <link rel="stylesheet" type="text/css" href="/reset.css"/>
-      <link rel="stylesheet" type="text/css" href="/stylesheet.css"/>
-    </head>
     <body>
       <%= yield %>
+    <footer>
+      This website is built using Ruby, Sinatra, Capybara, Cucumber, HTML, CSS and Postgres.
+    </footer>
     </body>
   </center>
 </html>
