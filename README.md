@@ -13,7 +13,6 @@ Features
 - In order to avoid others using my account as a maker I want to log out
 - In order to let people know what I am doing as a maker I want to post a message (peep) to chitter
 - In order to see what people have to say as a maker I want to see all peeps in chronological order
-
 - Makers sign up to chitter with their email, password, name and a user name.
 - The username and email are unique.
 - Peeps (posts to chitter) have the name of the maker and their user handle.
@@ -21,6 +20,8 @@ Features
 - Use data mapper and postgres to save the data.
 - You don't have to be logged in to see the peeps.
 - You only can peep if you are logged in.
+
+**Models - User, Peep**
 
 Bonus
 -----
@@ -30,11 +31,9 @@ In order to start a conversation as a maker I want to reply to a peep from anoth
 
 And/Or:
 
-Work on the css to make it look good (we all like beautiful things).
-*(I chose the above as I wanted to use the project as a way of imroving my css skills)*
-
-**Models - User, Peep**
+Work on the css to make it look good (we all like beautiful things).  
+*(I chose this option as I wanted to use the project as a way of improving my css skills)*
 
 Technologies
 ------------
-Ruby, Sinatra, Cucumber, Capybara, BCrypt, , Datamapper, Postgres
+Ruby, Sinatra, Cucumber, Capybara, BCrypt, Datamapper, Postgres
