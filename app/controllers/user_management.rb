@@ -1,3 +1,5 @@
+require_relative './helpers/helpers'
+
 class Chitter
 
   get '/' do
@@ -14,13 +16,7 @@ class Chitter
                        :username => params[:username],
                        :email => params[:email],
                        :password => params[:password])
-    if user.save
-      session[:user_id] = user.id
-      redirect to('/')
-    else
-      flash.now[:errors] = user.errors.full_messages
-      erb :"users/new"
-    end
+    sign_up_checks(user)
   end
 
   get '/sessions/new' do
@@ -30,13 +26,7 @@ class Chitter
   post '/sessions' do
     username, password = params[:username], params[:password]
     user = User.authenticate(username, password)
-    if user
-      session[:user_id] = user.id
-      redirect to('/')
-    else
-      flash[:notice] = "The username or password is incorrect. Please try again."
-      erb :"sessions/new"
-    end
+    sign_in_checks(user)
   end
 
   delete '/sessions' do
@@ -44,5 +34,7 @@ class Chitter
     flash[:notice] = "See you soon!"
     redirect to('/')
   end
+
+
 
 end

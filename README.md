@@ -36,4 +36,4 @@ Work on the css to make it look good (we all like beautiful things).
 
 Technologies
 ------------
-Ruby, Sinatra, Cucumber, Capybara, BCrypt, Datamapper, Postgres
+Ruby, Sinatra, Cucumber, Capybara, BCrypt, Datamapper, Postgres, Rack-flash
